@@ -15,20 +15,24 @@ const sentences = [
 
 function result(sentences) {
   // your code here
-  let maximumWords = 0;
 
+  let maximumWords = 0; //defining the max words
+
+  //Search the sentences with .length() method
   for(let i = 0; i < sentences.length; i++){
-    
-    const words = sentences[i].split(' ');
-    const countedWords = words.length;
 
+    const words = sentences[i].split(' '); //words variable save the split method
+    const countedWords = words.length; //Set the countedwords variable from counting the split method (words) with .length()
+
+    //Check if the countedWords greater than maximumWords, then set the maximumWords equal countedWords
     if(countedWords > maximumWords){
       maximumWords = countedWords;
     }
 
   }
 
+  //Then return the maximumWords that has been setted.
   return maximumWords;
 }
 
-console.log(result(sentences));
+console.log(result(sentences)); //should be return 23
